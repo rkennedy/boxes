@@ -1,0 +1,108 @@
+unit RectUnit;
+
+interface
+
+uses WinTypes;
+
+const
+	Rects: array[0..15, 0..15] of TRect = (
+		((Left:32;Top:32;Right:48;Bottom:48),(Left:48;Top:32;Right:64;Bottom:48),(Left:64;Top:32;Right:80;Bottom:48),
+		(Left:80;Top:32;Right:96;Bottom:48),(Left:96;Top:32;Right:112;Bottom:48),(Left:112;Top:32;Right:128;Bottom:48),
+		(Left:128;Top:32;Right:144;Bottom:48),(Left:144;Top:32;Right:160;Bottom:48),(Left:160;Top:32;Right:176;Bottom:48),
+		(Left:176;Top:32;Right:193;Bottom:48),(Left:192;Top:32;Right:208;Bottom:48),(Left:208;Top:32;Right:224;Bottom:48),
+		(Left:224;Top:32;Right:240;Bottom:48),(Left:240;Top:32;Right:256;Bottom:48),(Left:256;Top:32;Right:272;Bottom:48),
+		(Left:272;Top:32;Right:288;Bottom:48)),{0}
+		((Left:32;Top:48;Right:48;Bottom:64),(Left:48;Top:48;Right:64;Bottom:64),(Left:64;Top:48;Right:80;Bottom:64),
+		(Left:80;Top:48;Right:96;Bottom:64),(Left:96;Top:48;Right:112;Bottom:64),(Left:112;Top:48;Right:128;Bottom:64),
+		(Left:128;Top:48;Right:144;Bottom:64),(Left:144;Top:48;Right:160;Bottom:64),(Left:160;Top:48;Right:176;Bottom:64),
+		(Left:176;Top:48;Right:193;Bottom:64),(Left:192;Top:48;Right:208;Bottom:64),(Left:208;Top:48;Right:224;Bottom:64),
+		(Left:224;Top:48;Right:240;Bottom:64),(Left:240;Top:48;Right:256;Bottom:48),(Left:256;Top:48;Right:272;Bottom:64),
+		(Left:272;Top:48;Right:288;Bottom:64)),{1}
+		((Left:32;Top:64;Right:48;Bottom:80),(Left:48;Top:64;Right:64;Bottom:80),(Left:64;Top:64;Right:80;Bottom:80),
+		(Left:80;Top:64;Right:96;Bottom:80),(Left:96;Top:64;Right:112;Bottom:80),(Left:112;Top:64;Right:128;Bottom:80),
+		(Left:128;Top:64;Right:144;Bottom:80),(Left:144;Top:64;Right:160;Bottom:80),(Left:160;Top:64;Right:176;Bottom:80),
+		(Left:176;Top:64;Right:193;Bottom:80),(Left:192;Top:64;Right:208;Bottom:80),(Left:208;Top:64;Right:224;Bottom:80),
+		(Left:224;Top:64;Right:240;Bottom:80),(Left:240;Top:64;Right:256;Bottom:80),(Left:256;Top:64;Right:272;Bottom:80),
+		(Left:272;Top:64;Right:288;Bottom:80)),{2}
+		((Left:32;Top:80;Right:48;Bottom:96),(Left:48;Top:80;Right:64;Bottom:96),(Left:64;Top:80;Right:80;Bottom:96),
+		(Left:80;Top:80;Right:96;Bottom:96),(Left:96;Top:80;Right:112;Bottom:96),(Left:112;Top:80;Right:128;Bottom:96),
+		(Left:128;Top:80;Right:144;Bottom:96),(Left:144;Top:80;Right:160;Bottom:96),(Left:160;Top:80;Right:176;Bottom:96),
+		(Left:176;Top:80;Right:193;Bottom:96),(Left:192;Top:80;Right:208;Bottom:96),(Left:208;Top:80;Right:224;Bottom:96),
+		(Left:224;Top:80;Right:240;Bottom:96),(Left:240;Top:80;Right:256;Bottom:96),(Left:256;Top:80;Right:272;Bottom:96),
+		(Left:272;Top:80;Right:288;Bottom:96)),{3}
+		((Left:32;Top:96;Right:48;Bottom:112),(Left:48;Top:96;Right:64;Bottom:112),(Left:64;Top:96;Right:80;Bottom:112),
+		(Left:80;Top:96;Right:96;Bottom:112),(Left:96;Top:96;Right:112;Bottom:112),(Left:112;Top:96;Right:128;Bottom:112),
+		(Left:128;Top:96;Right:144;Bottom:112),(Left:144;Top:96;Right:160;Bottom:112),(Left:160;Top:96;Right:176;Bottom:112),
+		(Left:176;Top:96;Right:193;Bottom:112),(Left:192;Top:96;Right:208;Bottom:112),(Left:208;Top:96;Right:224;Bottom:112),
+		(Left:224;Top:96;Right:240;Bottom:112),(Left:240;Top:96;Right:256;Bottom:112),(Left:256;Top:96;Right:272;Bottom:112),
+		(Left:272;Top:96;Right:288;Bottom:112)),{4}
+		((Left:32;Top:112;Right:48;Bottom:128),(Left:48;Top:112;Right:64;Bottom:128),(Left:64;Top:112;Right:80;Bottom:128),
+		(Left:80;Top:112;Right:96;Bottom:128),(Left:96;Top:112;Right:112;Bottom:128),(Left:112;Top:112;Right:128;Bottom:128),
+		(Left:128;Top:112;Right:144;Bottom:128),(Left:144;Top:112;Right:160;Bottom:128),(Left:160;Top:112;Right:176;Bottom:128),
+		(Left:176;Top:112;Right:193;Bottom:128),(Left:192;Top:112;Right:208;Bottom:128),(Left:208;Top:112;Right:224;Bottom:128),
+		(Left:224;Top:112;Right:240;Bottom:128),(Left:240;Top:112;Right:256;Bottom:128),(Left:256;Top:112;Right:272;Bottom:128),
+		(Left:272;Top:112;Right:288;Bottom:128)),{5}
+		((Left:32;Top:128;Right:48;Bottom:144),(Left:48;Top:128;Right:64;Bottom:144),(Left:64;Top:128;Right:80;Bottom:144),
+		(Left:80;Top:128;Right:96;Bottom:144),(Left:96;Top:128;Right:112;Bottom:144),(Left:112;Top:128;Right:128;Bottom:144),
+		(Left:128;Top:128;Right:144;Bottom:144),(Left:144;Top:128;Right:160;Bottom:144),(Left:160;Top:128;Right:176;Bottom:144),
+		(Left:176;Top:128;Right:193;Bottom:144),(Left:192;Top:128;Right:208;Bottom:144),(Left:208;Top:128;Right:224;Bottom:144),
+		(Left:224;Top:128;Right:240;Bottom:144),(Left:240;Top:128;Right:256;Bottom:144),(Left:256;Top:128;Right:272;Bottom:144),
+		(Left:272;Top:128;Right:288;Bottom:144)),{6}
+		((Left:32;Top:144;Right:48;Bottom:160),(Left:48;Top:144;Right:64;Bottom:160),(Left:64;Top:144;Right:80;Bottom:160),
+		(Left:80;Top:144;Right:96;Bottom:160),(Left:96;Top:144;Right:112;Bottom:160),(Left:112;Top:144;Right:128;Bottom:160),
+		(Left:128;Top:144;Right:144;Bottom:160),(Left:144;Top:144;Right:160;Bottom:160),(Left:160;Top:144;Right:176;Bottom:160),
+		(Left:176;Top:144;Right:193;Bottom:160),(Left:192;Top:144;Right:208;Bottom:160),(Left:208;Top:144;Right:224;Bottom:160),
+		(Left:224;Top:144;Right:240;Bottom:160),(Left:240;Top:144;Right:256;Bottom:160),(Left:256;Top:144;Right:272;Bottom:160),
+		(Left:272;Top:144;Right:288;Bottom:160)),{7}
+		((Left:32;Top:160;Right:48;Bottom:176),(Left:48;Top:160;Right:64;Bottom:176),(Left:64;Top:160;Right:80;Bottom:176),
+		(Left:80;Top:160;Right:96;Bottom:176),(Left:96;Top:160;Right:112;Bottom:176),(Left:112;Top:160;Right:128;Bottom:176),
+		(Left:128;Top:160;Right:144;Bottom:176),(Left:144;Top:160;Right:160;Bottom:176),(Left:160;Top:160;Right:176;Bottom:176),
+		(Left:176;Top:160;Right:193;Bottom:176),(Left:192;Top:160;Right:208;Bottom:176),(Left:208;Top:160;Right:224;Bottom:176),
+		(Left:224;Top:160;Right:240;Bottom:176),(Left:240;Top:160;Right:256;Bottom:176),(Left:256;Top:160;Right:272;Bottom:176),
+		(Left:272;Top:160;Right:288;Bottom:176)),{8}
+		((Left:32;Top:176;Right:48;Bottom:192),(Left:48;Top:176;Right:64;Bottom:192),(Left:64;Top:176;Right:80;Bottom:192),
+		(Left:80;Top:176;Right:96;Bottom:192),(Left:96;Top:176;Right:112;Bottom:192),(Left:112;Top:176;Right:128;Bottom:192),
+		(Left:128;Top:176;Right:144;Bottom:192),(Left:144;Top:176;Right:160;Bottom:192),(Left:160;Top:176;Right:176;Bottom:192),
+		(Left:176;Top:176;Right:193;Bottom:192),(Left:192;Top:176;Right:208;Bottom:192),(Left:208;Top:176;Right:224;Bottom:192),
+		(Left:224;Top:176;Right:240;Bottom:192),(Left:240;Top:176;Right:256;Bottom:192),(Left:256;Top:176;Right:272;Bottom:192),
+		(Left:272;Top:176;Right:288;Bottom:192)),{9}
+		((Left:32;Top:192;Right:48;Bottom:208),(Left:48;Top:192;Right:64;Bottom:208),(Left:64;Top:192;Right:80;Bottom:208),
+		(Left:80;Top:192;Right:96;Bottom:208),(Left:96;Top:192;Right:112;Bottom:208),(Left:112;Top:192;Right:128;Bottom:208),
+		(Left:128;Top:192;Right:144;Bottom:208),(Left:144;Top:192;Right:160;Bottom:208),(Left:160;Top:192;Right:176;Bottom:208),
+		(Left:176;Top:192;Right:193;Bottom:208),(Left:192;Top:192;Right:208;Bottom:208),(Left:208;Top:192;Right:224;Bottom:208),
+		(Left:224;Top:192;Right:240;Bottom:208),(Left:240;Top:192;Right:256;Bottom:208),(Left:256;Top:192;Right:272;Bottom:208),
+		(Left:272;Top:192;Right:288;Bottom:208)),{10}
+		((Left:32;Top:208;Right:48;Bottom:224),(Left:48;Top:208;Right:64;Bottom:224),(Left:64;Top:208;Right:80;Bottom:224),
+		(Left:80;Top:208;Right:96;Bottom:224),(Left:96;Top:208;Right:112;Bottom:224),(Left:112;Top:208;Right:128;Bottom:224),
+		(Left:128;Top:208;Right:144;Bottom:224),(Left:144;Top:208;Right:160;Bottom:224),(Left:160;Top:208;Right:176;Bottom:224),
+		(Left:176;Top:208;Right:193;Bottom:224),(Left:192;Top:208;Right:208;Bottom:224),(Left:208;Top:208;Right:224;Bottom:224),
+		(Left:224;Top:208;Right:240;Bottom:224),(Left:240;Top:208;Right:256;Bottom:224),(Left:256;Top:208;Right:272;Bottom:224),
+		(Left:272;Top:208;Right:288;Bottom:224)),{11}
+		((Left:32;Top:224;Right:48;Bottom:240),(Left:48;Top:224;Right:64;Bottom:240),(Left:64;Top:224;Right:80;Bottom:240),
+		(Left:80;Top:224;Right:96;Bottom:240),(Left:96;Top:224;Right:112;Bottom:240),(Left:112;Top:224;Right:128;Bottom:240),
+		(Left:128;Top:224;Right:144;Bottom:240),(Left:144;Top:224;Right:160;Bottom:240),(Left:160;Top:224;Right:176;Bottom:240),
+		(Left:176;Top:224;Right:193;Bottom:240),(Left:192;Top:224;Right:208;Bottom:240),(Left:208;Top:224;Right:224;Bottom:240),
+		(Left:224;Top:224;Right:240;Bottom:240),(Left:240;Top:224;Right:256;Bottom:240),(Left:256;Top:224;Right:272;Bottom:240),
+		(Left:272;Top:224;Right:288;Bottom:240)),{12}
+		((Left:32;Top:240;Right:48;Bottom:256),(Left:48;Top:240;Right:64;Bottom:256),(Left:64;Top:240;Right:80;Bottom:256),
+		(Left:80;Top:240;Right:96;Bottom:256),(Left:96;Top:240;Right:112;Bottom:256),(Left:112;Top:240;Right:128;Bottom:256),
+		(Left:128;Top:240;Right:144;Bottom:256),(Left:144;Top:240;Right:160;Bottom:256),(Left:160;Top:240;Right:176;Bottom:256),
+		(Left:176;Top:240;Right:193;Bottom:256),(Left:192;Top:240;Right:208;Bottom:256),(Left:208;Top:240;Right:224;Bottom:256),
+		(Left:224;Top:240;Right:240;Bottom:256),(Left:240;Top:240;Right:256;Bottom:256),(Left:256;Top:240;Right:272;Bottom:256),
+		(Left:272;Top:240;Right:288;Bottom:256)),{13}
+		((Left:32;Top:256;Right:48;Bottom:272),(Left:48;Top:256;Right:64;Bottom:272),(Left:64;Top:256;Right:80;Bottom:272),
+		(Left:80;Top:256;Right:96;Bottom:272),(Left:96;Top:256;Right:112;Bottom:272),(Left:112;Top:256;Right:128;Bottom:272),
+		(Left:128;Top:256;Right:144;Bottom:272),(Left:144;Top:256;Right:160;Bottom:272),(Left:160;Top:256;Right:176;Bottom:272),
+		(Left:176;Top:256;Right:193;Bottom:272),(Left:192;Top:256;Right:208;Bottom:272),(Left:208;Top:256;Right:224;Bottom:272),
+		(Left:224;Top:256;Right:240;Bottom:272),(Left:240;Top:256;Right:256;Bottom:272),(Left:256;Top:256;Right:272;Bottom:272),
+		(Left:272;Top:256;Right:288;Bottom:272)),{14}
+		((Left:32;Top:272;Right:48;Bottom:288),(Left:48;Top:272;Right:64;Bottom:288),(Left:64;Top:272;Right:80;Bottom:288),
+		(Left:80;Top:272;Right:96;Bottom:288),(Left:96;Top:272;Right:112;Bottom:288),(Left:112;Top:272;Right:128;Bottom:288),
+		(Left:128;Top:272;Right:144;Bottom:288),(Left:144;Top:272;Right:160;Bottom:288),(Left:160;Top:272;Right:176;Bottom:288),
+		(Left:176;Top:272;Right:193;Bottom:288),(Left:192;Top:272;Right:208;Bottom:288),(Left:208;Top:272;Right:224;Bottom:288),
+		(Left:224;Top:272;Right:240;Bottom:288),(Left:240;Top:272;Right:256;Bottom:288),(Left:256;Top:272;Right:272;Bottom:288),
+		(Left:272;Top:272;Right:288;Bottom:288)){15});
+
+implementation
+
+end.
